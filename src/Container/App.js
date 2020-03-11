@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import Person from "./Component/Persons/Person/Person";
+import Person from "../Component/Persons/Person/Person";
 
 class App extends Component {
     state = {
@@ -21,18 +21,18 @@ class App extends Component {
     render() {
         let psons = null;
         if(this.state.displaystate){
-            psons=(
+            psons = (
                 <div>
                     {
                         this.state.persons.map((pers,index) => {
                             return(<Person name={pers.name} age={pers.age} key={index}
-                            click={()=>this.deletePersonHandler(index)}
+                                           click={()=>this.deletePersonHandler(index)}
                             />);
-                       })
+                        })
                     }
 
                 </div>
-            );
+                )
         }
         return (
             <div className="App">
