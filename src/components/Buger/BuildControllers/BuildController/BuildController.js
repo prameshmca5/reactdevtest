@@ -9,7 +9,7 @@ const BuildController = (props) => {
                 <button className="Less">Less</button>
 
             </div>
-            <div><button className="More">More</button></div>
+            <div><button className="More" onClick={props.addBurgercnt}>More</button></div>
         </div>
     )
 };

@@ -15,7 +15,11 @@ const BuildControllers = (props) => {
         <div className="BuildControls">
             {
                 control.map(ctrl=> {
-                    return <BuildController key={ctrl.label} label={ctrl.label}></BuildController>
+                    return <BuildController
+                        key={ctrl.label}
+                        label={ctrl.label}
+                        addBurgercnt = {() => props.addInherdiant(ctrl.type)}
+                    />
                 })
             }
         </div>
